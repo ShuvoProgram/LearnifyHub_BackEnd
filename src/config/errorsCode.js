@@ -1,0 +1,28 @@
+/**
+ *  @description Application specific error codes
+ * 
+ */
+
+const DEFAULT_ERROR = 1000
+const VALIDATION_ERROR = 1001
+const AUTHENTICATION_ERROR = 1002
+const FORBIDDEN_ERROR = 1003
+const CONFLICT = 1004
+
+const INTERNAL_ERROR = 2000
+const TRANSACTION_ERROR = 2001
+const ORDER_ERROR = 2002
+
+const MEDIA_SIZE_EXCEEDED = 1105
+
+export const ErrorCode = {
+    DEFAULT_ERROR,
+    VALIDATION_ERROR,
+    AUTHENTICATION_ERROR,
+    FORBIDDEN_ERROR,
+    CONFLICT,
+    INTERNAL_ERROR,
+    TRANSACTION_ERROR,
+    ORDER_ERROR,
+    MEDIA_SIZE_EXCEEDED
+}
