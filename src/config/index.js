@@ -1,9 +1,9 @@
-import dotenv from 'dotenv';
-import path from 'path';
+const dotenv = require('dotenv')
+const path = require('path');
 
 dotenv.config({ path: path.join(process.cwd(), '.env') });
 
-export default {
+const config = {
     env: process.env.NODE_ENV,
     port: process.env.PORT || 5001,
     url: process.env.PRODUCTION_URL || process.env.LOCAL_URL,
@@ -16,3 +16,5 @@ export default {
         refresh_expires_in: process.env.REFRESH_TOKEN_EXPIRATION,
     }
 }
+
+module.exports = config;
