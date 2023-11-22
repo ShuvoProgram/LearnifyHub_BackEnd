@@ -1,4 +1,4 @@
-const attachTokenToCookie = (cookieName, Token, res) => {
+attachTokenToCookie = (cookieName, Token, res) => {
     console.log('cookie set - https only ? - ',process.env.NODE_ENV === 'production')
     res.cookie(cookieName, Token, {
         httpOnly: true,
@@ -8,4 +8,4 @@ const attachTokenToCookie = (cookieName, Token, res) => {
     })
 }
 
-export default attachTokenToCookie;
+module.exports = attachTokenToCookie;

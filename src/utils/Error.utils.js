@@ -1,11 +1,6 @@
-import {
-	ReasonPhrases,
-	StatusCodes,
-} from 'http-status-codes';
+const { StatusCodes, ReasonPhrases } = require('http-status-codes');
+const ErrorCode = require('../config/errorsCode');
 
-import {
-    ErrorCode
-} from '../config/errorsCode'
 
 
 /**
@@ -106,4 +101,4 @@ class AppError extends Error {
     }
 }
 
-export default AppError;
+module.exports = AppError;
