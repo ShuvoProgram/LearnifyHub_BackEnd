@@ -1,5 +1,5 @@
 const AppError = require("../utils/app.error.util");
-const asyncHandler = require("../utils/async.handler.util");
+const asyncHandler = require("../../utils/async.handler.util");
 const { createAccessTokenAdmin } = require("../utils/generate.tokens.util");
 const attachTokenToCookie = require('../utils/cookie.util')
 

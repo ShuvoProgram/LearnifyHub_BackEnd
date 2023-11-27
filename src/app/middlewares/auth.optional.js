@@ -1,4 +1,4 @@
-const jwtHelper = require('../../utils/jwtHelper.utils')
+const {verifyToken} = require('../../utils/jwtHelper.utils')
 
 const isAuth = async (req, res, next) => {
     console.log('\nUser isAuth Optional Middleware accessed')
@@ -16,7 +16,7 @@ const isAuth = async (req, res, next) => {
         return next()
     }
 
-    jwtHelper.verifyToken(accessToken, process.env.ACCESS_TOKEN_SECRET)
+    verifyToken(accessToken, process.env.ACCESS_TOKEN_SECRET)
         .then((response) => {
             console.log('token verified')
             req.user = response.user;

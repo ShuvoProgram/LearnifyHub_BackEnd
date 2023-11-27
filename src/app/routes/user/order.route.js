@@ -2,10 +2,6 @@ const router = require('express').Router()
 const orderController = require('../../controller/order.controller')
 const isAuth = require('../../middlewares/user.auth')
 
-/**
- * Base route to Orders
- * @route /api/users/orders
- */
 
 // add isAuth middleware to all routes
 router.use(isAuth)
