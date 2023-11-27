@@ -1,4 +1,4 @@
-const AppError = require("../utils/app.error.util")
+const AppError = require("../../utils/error.utils")
 const asyncHandler = require("../../utils/async.handler.util");
 const { createCategorySchema } = require('../validation/category.validator')
 const categoryService = require('../services/category.service')
