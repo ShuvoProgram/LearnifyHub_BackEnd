@@ -1,4 +1,4 @@
-const verifyToken = require('../utils/auth.util')
+const {verifyToken} = require('../../utils/jwtHelper.utils')
 
 const isAuth = async (req, res, next) => {
     console.log('\nUser isAuth Middleware accessed')
