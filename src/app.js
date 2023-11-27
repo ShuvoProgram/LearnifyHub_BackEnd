@@ -4,6 +4,7 @@ const cors = require('cors')
 const mongoSanitize = require('express-mongo-sanitize');
 const corsOptions =  require('./config/corsOptions')
 const config =  require('./config')
+const errorHandler = require('./app/middlewares/error.handler')
 const router = require("./app/routes")
 
 const app = express();
@@ -32,20 +33,7 @@ app.get('/api/v1', async (req , res) => {
   })
 
 // Global error handler (should be placed after route handlers)
-// app.use(globalErrorHandler)
+app.use(errorHandler)
 
-// app.use((req, res, next) => {
-//     res.status(404).json({
-//         success: false,
-//         message: 'Not Found',
-//         errorMessage: [
-//             {
-//                 path: res.originalUrl,
-//                 message: 'API Not Found',
-//             }
-//         ]
-//     });
-//     next();
-// })
 
 module.exports = app;

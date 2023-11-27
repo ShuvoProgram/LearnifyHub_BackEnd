@@ -2,7 +2,7 @@ const userService = require('../services/user.service')
 const AppError = require('../../utils/error.utils')
 const asyncHandler = require('../../utils/async.handler.util')
 const objectIdSchema = require('../../error/validateParams')
-const userDetailsSchema = require('../validation/user.details.validator')
+const userDetailsSchema = require('../validation/user.details.validation')
 
 //check if user is enrolled in a course by passing couresId and userId
 const checkCourseEnrolled = async (req, res) => {

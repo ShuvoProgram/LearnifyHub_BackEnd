@@ -2,27 +2,7 @@ const { StatusCodes, ReasonPhrases } = require('http-status-codes');
 const ErrorCode = require('../config/errorsCode');
 
 
-
-/**
- * @desc To throw an error that is not defined
- * @usage ```js
- * throw new AppError (1001,'This is an error message',419)
- * ```
- * 
- * @desc To throw an error that is defined
- * @usage ```js 
- * throw AppError.validation('This is an error message')
- * ``` 
- */
-
 class AppError extends Error {
-
-    /**
-     * Constructs an instance of AppError.
-     * @param {number} [appCode] - The application-specific error code.
-     * @param {string} [message] - The error message.
-     * @param {number} [statusCode] - The HTTP status code associated with the error.
-     */
 
     constructor(
         appCode = ErrorCode.DEFAULT_ERROR,
@@ -33,12 +13,6 @@ class AppError extends Error {
         this.appCode = appCode
         this.statusCode = statusCode
     }
-
-    /**
-     * Creates a new instance of AppError with a specific error code and message.
-     * @param {string} [message] - The error message.
-     * @returns {AppError} - The new AppError instance.
-     */
 
     static validation(message = ReasonPhrases.BAD_REQUEST) {
         return new AppError(

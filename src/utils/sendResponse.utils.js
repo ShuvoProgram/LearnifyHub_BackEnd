@@ -1,5 +1,3 @@
-// import { Response } from 'express';
-
 const sendResponse = (res, data) => {
     const responseData = {
         status: data.statusCode,
